@@ -1,0 +1,32 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dist/vidage.css">
+    <style>
+      /* Override the cover image. Set the path to the actual image... */
+      .vidage::before {
+        background-image: url('images/fallback.jpg');
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="vidage">
+      <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
+        <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- START: Rest of your site content -->
+    ...
+    <!-- END: Rest of your site content -->
+
+    <script src="dist/vidage.js"></script>
+    <script>
+      new Vidage('#vidage')
+    </script>
+  </body>
+</html>
