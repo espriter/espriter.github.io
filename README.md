@@ -1,3 +1,15 @@
+<div class="vidage">
+  <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
+    <source src="videos/bg.webm" type="video/webm">
+    <source src="videos/bg.mp4" type="video/mp4">
+  </video>
+</div>
+$vdg-fallback-image: url('../images/fallback.jpg');
+@import '~vidage/src/styles/vidage';
+import Vidage from 'vidage'
+new Vidage('#vidage')
+
+
 # Vidage
 
 This JS module will treat video as a background. It will determine when to hide/show & pause/play the video.
