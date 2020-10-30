@@ -4,6 +4,12 @@
   </video>
 </div>
 
+// set the fallback-cover image
+$vdg-fallback-image: url('../images/fallback.jpg');
+
+// import package
+@import '~vidage/src/styles/vidage';
+
 # Vidage
 
 This JS module will treat video as a background. It will determine when to hide/show & pause/play the video.
