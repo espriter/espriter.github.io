@@ -1,7 +1,6 @@
 <div class="vidage">
   <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
-    <source src="videos/bg.webm" type="video/webm">
-    <source src="videos/bg.mp4" type="video/mp4">
+    <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
   </video>
 </div>
 
