@@ -4,10 +4,7 @@
   </video>
 </div>
 
-// set the fallback-cover image
 $vdg-fallback-image: url('../images/fallback.jpg');
-
-// import package
 @import '~vidage/src/styles/vidage';
 
 # Vidage
