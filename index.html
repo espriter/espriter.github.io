@@ -1,0 +1,32 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="dist/vidage.css">
+    <style>
+      /* Override the cover image. Set the path to the actual image... */
+      .vidage::before {
+        background-image: url('https://www.freepngimg.com/thumb/mario/20698-7-mario-transparent-background.png');
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="vidage">
+      <video id="vidage" class="vidage-video" preload="metadata" loop autoplay muted>
+        <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- START: Rest of your site content -->
+    ...테스트테스트
+    <!-- END: Rest of your site content -->
+
+    <script src="dist/vidage.js"></script>
+    <script>
+      new Vidage('#vidage')
+    </script>
+  </body>
+</html>
