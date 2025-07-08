@@ -1,6 +1,6 @@
 # Site settings
 title: espriter
-email: ""
+# email: ""
 description: "---"
 url: "https://espriter.github.io"
 baseurl: ""
