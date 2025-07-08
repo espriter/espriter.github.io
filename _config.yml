@@ -1,6 +1,7 @@
 # Site settings
 title: espriter
 description: "---"
+email: "esprit@espriter.net"
 url: "https://espriter.github.io"
 baseurl: ""
 instagram_username: "espriter.life"
