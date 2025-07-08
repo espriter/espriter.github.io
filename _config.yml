@@ -4,13 +4,8 @@ email: ""
 description: "Photo Journal"
 url: "https://espriter.github.io"
 baseurl: ""
-facebook_username: ""
-twitter_username: ""
-instagram_username: ""
-github_username:  ""
-deviantart_username: ""
-flickr_username: ""
-discus_shortname: ""
+instagram_username: "espriter.life"
+github_username:  "espriter"
 share: true
 
 # Owner/author information
@@ -30,12 +25,6 @@ comments :
   provider : disqus
   disqus :
     short_name : ""
-
-# Internal nav
-nav:
-  - GALLERY: "https://sunbliss.github.io/photorama/gallery/"  
-  - JOURNAL: "https://sunbliss.github.io/photorama/journal/"
-  - ABOUT: "https://sunbliss.github.io/photorama/about/"
 
 # All translation keys
 translations:
