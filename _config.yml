@@ -33,7 +33,7 @@ comments :
 # All translation keys
 translations:
  # 404.html
-  permalink: "/404.html"
+  permalink: "/index.html"
 
 # Server
 destination:      	 ./_site
