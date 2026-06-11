@@ -53,27 +53,6 @@ subtitle: "Data engineer"
     letter-spacing: 0.04em;
   }
 
-  .soc {
-    position: fixed;
-    bottom: 28px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    text-align: center;
-  }
-  .soc a {
-    color: rgba(232, 237, 245, 0.55);
-    font-size: 18px;
-    margin: 0 12px;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .soc a:hover { color: #e8edf5; }
-
-  /* hide social icons on mobile */
-  @media (max-width: 768px) {
-    .soc { display: none; }
-  }
 </style>
 </head>
 
@@ -90,17 +69,6 @@ subtitle: "Data engineer"
 		</div>
 
 	</section>
-
-<div class="soc" role="contentinfo">
-	<a href="https://www.linkedin.com/in/gihoonshin" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
-	{% if site.github_username %}
-	<a href="https://github.com/{{ site.github_username }}" target="_blank" title="Github"><i class="fa fa-github"></i></a>
-	{% endif %}
-	{% if site.instagram_username %}
-	<a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
-	{% endif %}
-	<a href="mailto:{{ site.email }}" title="Email"><i class="fa fa-envelope-o"></i></a>
-</div>
 
 <!-- jQuery + Bootstrap (nav toggle) -->
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
