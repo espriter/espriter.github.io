@@ -53,6 +53,39 @@ subtitle: "Data engineer"
     letter-spacing: 0.04em;
   }
 
+  /* nav adjustments for the dark canvas background:
+     flatten Bootstrap's gray pressed state and drop the
+     photo-era text shadow */
+  a, button { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #e8edf5;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus,
+  .navbar-default .navbar-toggle:active {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: transparent;
+  }
+  .navbar-custom .nav,
+  .navbar-custom .nav li a {
+    text-shadow: none !important;
+  }
+  .navbar-custom .nav li a {
+    color: rgba(232, 237, 245, 0.85);
+  }
+  .navbar-custom .nav li a:hover,
+  .navbar-custom .nav li a:focus {
+    color: #22d3ee;
+  }
+  .navbar-default .navbar-collapse {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+  @media (max-width: 767px) {
+    .navbar-default .navbar-collapse {
+      background: rgba(11, 15, 26, 0.92);
+    }
+  }
 </style>
 </head>
 
