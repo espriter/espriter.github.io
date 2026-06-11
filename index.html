@@ -2,14 +2,6 @@
 layout: home
 main-title: "espriter"
 subtitle: "Data engineer"
-description: ""
-images:
- - image_path: /img/slider/home01.jpg
-   gallery-folder: /img/slider/
- - image_path: /img/slider/home02.jpg
-   gallery-folder: /img/slider/
- - image_path: /img/slider/home03.jpg
-   gallery-folder: /img/slider/
 ---
 
 
@@ -19,140 +11,106 @@ images:
 
 <!-- CSS -->
      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css" type="text/css" media="screen" />
-      <link rel="stylesheet" href="{{ site.baseurl }}/css/galleries.css" media="screen" />
-<link rel="stylesheet" href="{{ site.baseurl }}/css/WYSIWYG.css" media="screen" />
 
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #0b0f1a;
+  }
 
+  #bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+  }
 
-	<!-- Modernizr -->
-  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+  .hero {
+    position: fixed;
+    top: 14%;
+    left: 8%;
+    z-index: 2;
+    pointer-events: none;
+    color: #e8edf5;
+    font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 4.6vw, 58px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0;
+  }
+  .hero h2 {
+    font-size: clamp(16px, 2vw, 24px);
+    font-weight: 300;
+    color: rgba(232, 237, 245, 0.55);
+    margin: 10px 0 0;
+    letter-spacing: 0.04em;
+  }
 
-
-
-  
-
+  .soc {
+    position: fixed;
+    bottom: 28px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-align: center;
+  }
+  .soc a {
+    color: rgba(232, 237, 245, 0.55);
+    font-size: 18px;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .soc a:hover { color: #e8edf5; }
+</style>
 </head>
 
-<body class="fullscreen">
+<body>
 
 <!-- MAIN CONTENT SECTION  _____________________________________________-->
 	<section id="content" role="main">
-		<div class="wrapper">
 
-			<!-- WYSIWYG -->
+		<canvas id="bg"></canvas>
 
-		<div class="position-absolute">
-				<h2 class="big no-margin"><strong>{{ page.main-title }}</strong></h2>
-				<h2>{{ page.subtitle }}</h2> 
-                     <div class="entry-summary">
-							<p>{{ page.description }}</p>
-						</div><br />
-			</div>
-			
-			<div class="gallery fullscreen-gallery kenburns-gallery">
+		<div class="hero">
+			<h1>{{ page.main-title }}</h1>
+			<h2>{{ page.subtitle }}</h2>
+		</div>
 
-				<canvas id="kenburns"></canvas>
-				
-{% for image in page.images %}  	
-
-				<figure class="gallery-item">
-					<header class='gallery-icon'>
-
-<a href="{{ site.url }}{{ site.baseurl }}{{ image.gallery-folder }}">
-<img src="{{ site.url }}{{ site.baseurl }}{{ image.image_path }}"></a>
-	
-				</header>	
-				</figure>
-
-{% endfor %}
-
-				</div>
-			<!-- END WYSIWYG -->
-			
-	
-		</div><!-- END .wrapper -->
-		
 	</section>
 
-<div id="footer" role="contentinfo">
-		<ul class="soc-icons">
+<div class="soc" role="contentinfo">
+	<a href="https://www.linkedin.com/in/gihoonshin" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+	{% if site.github_username %}
+	<a href="https://github.com/{{ site.github_username }}" target="_blank" title="Github"><i class="fa fa-github"></i></a>
+	{% endif %}
+	{% if site.instagram_username %}
+	<a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+	{% endif %}
+	<a href="mailto:{{ site.email }}" title="Email"><i class="fa fa-envelope-o"></i></a>
+</div>
 
-                 {% if site.facebook_username %}
-			<li>
-   <a href="https://facebook.com/{{ site.facebook_username }}" style="
-color:#dddddd; target="_blank" title="Facebook">
-                       <i class="fa fa-facebook"></i>
-                     </span>
-</a></li>
-    {% endif %}
- {% if site.twitter_username %}
-			<li>
-   <a href="https://twitter.com/{{ site.twitter_username }}" style="
-color:#dddddd; target="_blank" title="Twitter">
-                       <i class="fa fa-twitter"></i>
-                     </span>
-</a></li>
-    {% endif %}
-                {% if site.instagram_username %}
-			<li>
-   <a href="https://instagram.com/{{ site.instagram_username }}" style="
-color:#dddddd; target="_blank" title="Instagram">
-                       <i class="fa fa-instagram"></i>
-                     </span>
-</a></li>
-    {% endif %}
-                    {% if site.flickr_username %}
-						<li>
-   <a href="https://flickr.com/photos/{{ site.flickr_username }}" style="
-color:#dddddd; target="_blank" title="Flickr">
-              <i class="fa fa-flickr"></i>
-                     </span>
- </a></li>	
-     {% endif %}
-                    {% if site.deviantart_username %}
-			<li>
-   <a href="http://{{ site.deviantart_username }}.deviantart.com" style="
-color:#dddddd; target="_blank" title="DeviantArt">
-<i class="fa fa-deviantart"></i> </span>
-</a></li>	
-    {% endif %}
-                    {% if site.github_username %}
-                <li>
-   <a href="https://github.com/{{ site.github_username }}" style="
-color:#dddddd; target="_blank" title="Github">
-              <i class="fa fa-github"></i>
-                     </span>
-                   {% endif %}
-<li>
-    <a href="mailto:{{ site.email }}" style="
-color:#dddddd; target="_blank" title="Email">
-              <i class="fa fa-envelope-o"></i></span>
-          </a> </li>
-	
-					
-		</ul>	
-	</div>
-
-  
-<!-- jQuery -->
+<!-- jQuery + Bootstrap (nav toggle) -->
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <script src="{{ site.baseurl }}/js/retina.min.js"></script> 
-
-<!-- include mousewheel plugins -->
-<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
-<!-- include gallery cycle plugin -->
-<script src="{{ site.baseurl }}/js/jquery.cycle.min.js"></script>
-<!-- include kenburns plugins -->
-<script src="{{ site.baseurl }}/js/kenburns.min.js"></script>
-<!-- include svg line drawing plugin -->
-<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
-<!-- include custom script -->
-<script src="{{ site.baseurl }}/js/scripts.js"></script>
-
+<!-- interactive pipeline background -->
+<script src="/js/bg-pipeline.js"></script>
+<script>
+  (function () {
+    var canvas = document.getElementById('bg');
+    if (canvas && window.BG_VARIANTS && window.BG_VARIANTS.pipeline) {
+      window.BG_VARIANTS.pipeline.init(canvas, { theme: 'dark' });
+    }
+  })();
+</script>
 
        </body>
     </html>
-
